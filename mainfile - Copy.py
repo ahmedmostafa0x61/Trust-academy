@@ -457,14 +457,14 @@ class MainApp(QMainWindow, Program):
                INSERT INTO students (name,birthday,address,phone,mother_name,mother_id,mother_number,mother_job,
                father_name,father_id,father_number,father_job,authorized_person,authorized_number,emergency,
                emergency_relationship,starting_date,paid_money,subscription_type,e_or_f,added_time,ending_date,
-               bus,shirt,sweet,pants,study,day_by_day,application) 
-               VALUES (%s,%s,%s,%s,%s,%s,%s,%s,%s,%s,%s,%s,%s,%s,%s,%s,%s,%s,%s,%s,%s,%s,%s,%s,%s,%s,%s,%s,%s)
+               bus,shirt,sweet,pants,study,day_by_day,application,days_number) 
+               VALUES (%s,%s,%s,%s,%s,%s,%s,%s,%s,%s,%s,%s,%s,%s,%s,%s,%s,%s,%s,%s,%s,%s,%s,%s,%s,%s,%s,%s,%s,'13')
                 ''', (
                 name, birthday, address, phone, mother_name, mother_id, mother_phone, mother_job,
                 father_name, father_id, father_phone, father_job, authorized_name, authorized_phone,
                 emergency, emergency_relationship, starting_date, int(paid_money), subscription_type, e_or_f,
                 added_time, ending_date, bus, shirt, sweet, pants, books, day_by_day, app))
-            self.cur.execute('''INSERT INTO students days_number=13''')
+            # self.cur.execute('''INSERT INTO students (days_number) VALUES ('13') ''')
             # Financial Operation
             # date = datetime.datetime.now()
             # today = datetime.datetime.today().strftime('%A')
